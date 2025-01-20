@@ -1,0 +1,28 @@
+<!-- <h2>ngClass Example Without External CSS:</h2>
+<p [ngClass]="{
+      'highlight': isHighlighted, 
+      'underline': isUnderlined
+    }"
+    [ngStyle]="{
+      'color': isHighlighted ? 'blue' : 'black',
+      'text-decoration': isUnderlined ? 'underline' : 'none'
+    }">
+  This is a dynamically styled paragraph using inline classes.
+</p>
+
+<button (click)="isHighlighted = !isHighlighted">Toggle H</button>
+<button (click)="isUnderlined = !isUnderlined">Toggle U</button> -->
+
+<h2>ngClass Example:</h2>
+<p [ngClass]="{'highlighted': isHighlighted}">
+  Test
+</p>
+<button (click)="toggleHighlight()">Toggle H</button>
+
+<style>
+  .highlighted {
+    color: blue;
+    font-weight: bold;
+  }
+</style>
+

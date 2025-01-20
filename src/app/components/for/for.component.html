@@ -1,0 +1,57 @@
+<!-- <div>
+    <ul>
+        @for(item of cityArray;track $index){
+          <li>{{item}}</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <select>
+        @for(item of studentList;track $index){
+            <option [value]="item.studentId">{{item.name}},{{item.city}}</option>
+        }
+    </select>
+</div> -->
+
+<div>
+    <input type="text" [(ngModel)]="Daynumber">
+</div>
+<div>
+    DayName is:
+    @switch(Daynumber){
+
+    @case('1'){
+    <span>Monday</span>
+
+    }
+
+    @case('2'){
+    <span>Tuesday</span>
+
+    }
+    @case('3'){
+    <span>wednesday</span>
+
+    }
+    @case('4'){
+    <span>thursday</span>
+
+    }
+    @case('5'){
+        <span>friday</span>
+    
+    }
+    @case('6'){
+        <span>saturday</span>
+    
+    }
+    @case('7'){
+        <span>sunday</span>
+    
+    }
+    @default{
+        <span>Wrong entry</span>
+    }
+}
+</div>

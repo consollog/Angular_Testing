@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-2">
+    one way data binding .ts to .html
+    </div>
+    <div class="col-2">
+        
+    </div>
+    <div class="col-2">
+        
+    </div>
+</div>
+
+<div class="col-2 bg-success">
+     <!-- Interpolation -->
+    <h4>{{name}}</h4>
+    <input type="text" value="{{name}}">
+    <input type="{{checkbox}}">
+</div>
+
+<!-- propert binding -->
+<div [class]="myclassName">
+    <h4>{{name}}</h4>
+    <input type="text" [value]="name" class="">
+    <input [type]="checkbox">
+</div>
+
+<div class="col-2 bg-success">
+    <button class="btn btn-success" (click)="showAlert('What u want?')">Show Welcome</button>
+</div>
+
+<div class="col-6">
+    <input type="text" [(ngModel)]="name"/> - {{name}}
+</div>
+
+<select [(ngModel)]="stateName">
+    <option value="">select</option>
+    <option value="gujrat">gujrat</option>
+    <option value="goa">goa</option>
+    <option value="keral">keral</option>
+</select>
+
+<div class="col-6">
+  <h2>{{firstName()}}</h2>
+</div>
+

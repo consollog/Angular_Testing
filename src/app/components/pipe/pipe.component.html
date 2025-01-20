@@ -1,0 +1,47 @@
+<div>
+    original value - {{firstName}}
+    <br>
+    after pipe - {{firstName | uppercase}}
+</div>
+
+<div>
+    original value - {{firstName}}
+    <br>
+    after pipe - {{firstName | lowercase}}
+</div>
+
+<div>
+    original value - {{firstName}}
+    <br>
+    after pipe - {{firstName | titlecase}}
+</div>
+
+<div>
+    original value - {{currentDate}}
+    <br>
+    after pipe - {{currentDate | date:"dd-MM-yyyy"}}
+</div>
+
+<div>
+    original value - {{student}}
+    <br>
+    after pipe - {{student | json}}
+</div>
+
+<div>
+    original value - {{currenttime}}
+    <br>
+    after pipe - {{currenttime | async}}
+</div>
+
+<div>
+    original value - {{currenttime}}
+    <br>
+    after pipe - {{currenttime | async | date:"hh:mm:ss"}}
+</div>
+
+<div>
+    original value - {{student.state}}
+    <br>
+    after pipe - {{student.state | na}}
+</div>

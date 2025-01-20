@@ -1,0 +1,16 @@
+<div *ngIf="isVisible">
+    This content is visible because isVisible is true.
+  </div>
+
+<button (click)="toggleVisibility()">Toggle</button>
+
+<ul>
+    <li *ngFor="let fruit of fruits">
+      {{ fruit }}
+    </li>
+
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+  
+
+  
