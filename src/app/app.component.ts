@@ -5,10 +5,11 @@ import { PostComponent } from './components/post/post.component';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GetApiComponent } from './components/get-api/get-api.component';
+import { PutApiComponent } from './components/put-api/put-api.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ReactiveComponent,GetApiComponent,CommonModule,FormsModule],
+  imports: [PutApiComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,29 @@
+<div>
+    <h2>User Profile</h2>
+
+    <form *ngIf="isEditing" (ngSubmit)="saveUser()">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="user.name" name="name" required />
+      </div>
+      <div>
+        <label for="surname">Surname:</label>
+        <input id="surname" [(ngModel)]="user.surname" name="surname" required />
+      </div>
+      <div>
+        <label for="address">Address:</label>
+        <input id="address" [(ngModel)]="user.address" name="address" required />
+      </div>
+      <button type="submit">Save</button>
+    </form>
+
+    <div *ngIf="!isEditing && user">
+      <p><strong>Name:</strong> {{ user.name }}</p>
+      <p><strong>Surname:</strong> {{ user.surname }}</p>
+      <p><strong>Address:</strong> {{ user.address }}</p>
+      <button (click)="editUser()">Edit</button>
+      <button (click)="deleteUser()">Delete</button>
+    </div>
+
+    <p *ngIf="response">{{ response }}</p>
+  </div>

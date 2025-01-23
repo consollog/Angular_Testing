@@ -5,24 +5,22 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-get-api',
-  imports: [FormsModule,CommonModule],
+  imports: [CommonModule],
   templateUrl: './get-api.component.html',
   styleUrl: './get-api.component.css'
 })
 export class GetApiComponent {
-  data: any = []; 
+  posts: any[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.fetchPosts();
+  }
 
-  getData() {
-    this.http.get('https://api.example.com/data') 
-      .subscribe(
-        (response) => { 
-          this.data = response; 
-        },
-        (error) => {
-          console.error('Error fetching data:', error); 
-        }
-      );
+  fetchPosts(): void {
+    const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+    this.http.get<any[]>(apiUrl).subscribe({
+      next: (data) => (this.posts = data),
+      error: (error) => console.error('Error fetching data:', error),
+    });
   }
 }
