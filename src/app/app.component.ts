@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
-import { NgTemplateComponent } from './components/ng-template/ng-template.component';
+import { NgContainerComponent } from './components/ng-container/ng-container.component';
 // import { RouterLink, RouterOutlet } from '@angular/router';
+// import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 // import { ReactiveComponent } from './components/reactive/reactive.component';
 // import { PostComponent } from './components/post/post.component';
 // import { FormsModule } from '@angular/forms';
@@ -10,7 +11,7 @@ import { NgTemplateComponent } from './components/ng-template/ng-template.compon
 
 @Component({
   selector: 'app-root',
-  imports: [NgTemplateComponent,CommonModule],
+  imports: [NgContainerComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

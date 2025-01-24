@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-4">
+        <ng-container *ngIf="isContainer">
+            <p>This is ng-container</p>
+        </ng-container>
+    </div>
+    <div class="col-4">
+       <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr number</th>
+                <th>Name</th>
+                <th>User Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="isApi">
+                <td colspan="4" class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-secondary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-info" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-light" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-border text-dark" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                </td>
+            </ng-container>
+            <tr *ngFor="let users of userlist; let srNo=index">
+                <td>{{srNo+1}}</td>
+                <td>{{users.name}}</td>
+                <td>{{users.username}}</td>
+                <td>{{users.email}}</td>
+            </tr>
+        </tbody>
+       </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <ng-container *ngTemplateOutlet="template"></ng-container>
+    </div>
+</div>
+
+<ng-template #template>
+<p>hello From Template</p>
+</ng-template>
+
+<div class="row">
+    <div class="col-4">
+       <button class="btn btn-primary" (click)="getuser()">Get Data</button>
+    </div>
+</div>
