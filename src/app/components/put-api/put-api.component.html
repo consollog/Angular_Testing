@@ -1,5 +1,5 @@
 <div>
-    <h2>User Profile</h2>
+    <h2>User Data</h2>
 
     <form *ngIf="isEditing" (ngSubmit)="saveUser()">
       <div>
@@ -25,5 +25,6 @@
       <button (click)="deleteUser()">Delete</button>
     </div>
 
-    <p *ngIf="response">{{ response }}</p>
+    <p *ngIf="response">{{ response}}</p>
+    <p>{{user| json}}</p>
   </div>

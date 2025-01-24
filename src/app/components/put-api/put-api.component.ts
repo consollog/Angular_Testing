@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-put-api',
-  imports: [CommonModule,FormsModule,FormsModule],
+  imports: [CommonModule,FormsModule,FormsModule,JsonPipe],
   templateUrl: './put-api.component.html',
   styleUrl: './put-api.component.css'
 })

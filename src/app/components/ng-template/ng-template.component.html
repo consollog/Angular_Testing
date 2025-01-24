@@ -1,0 +1,28 @@
+<div class="bg-primary p-3" *ngIf="isLoggedin; else notLodded">{{looggedinUser}}</div>
+<ng-template #notLodded>
+    <div class="bg-danger p-3">User not lodded in</div>
+</ng-template>
+
+<div class="col-4">
+    <ng-template #dynamictemp>
+        <p>Hello from yash</p>
+    </ng-template>
+</div>
+
+<div class="col-4">
+    <div #dynamiContainer>
+
+    </div>
+</div>
+
+<div class="col-3 text-center">
+  
+</div>
+
+<div class="col-3 text-center">
+    
+</div>
+
+<div class="col-3 text-center">
+   <button class="btn btn-danger" (click)="DynamicTempDisplay()">Load content</button>
+</div>
