@@ -1,0 +1,13 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Welcome to the Home Page</h1>
+    <p>Without Login</p>
+    
+    <!-- Show the "More" button only if the user is NOT logged in -->
+    <button *ngIf="!isLoggedIn" (click)="goToLogin()">More</button>
+
+    <!-- Show the additional content if logged in -->
+    <div *ngIf="isLoggedIn" style="margin-top: 20px;">
+      <h2>Additional Content</h2>
+      <p>Jay Swaminarayan From yash</p>
+    </div>
+  </div>

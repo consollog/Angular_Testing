@@ -2,8 +2,11 @@ import { Routes } from '@angular/router';
 import { AddEmployeComponent } from './components/add-employe/add-employe.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { EmployeelistComponent } from './components/employeelist/employeelist.component';
-import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { Login2Component } from './components/login2/login2.component';
+import { LogiForGuardComponent } from './components/logi-for-guard/logi-for-guard.component';
+import { authGuard } from './service/auth.guard';
+import { HomeForGuardComponent } from './components/home-for-guard/home-for-guard.component';
 
 export const routes: Routes = [
     // {
@@ -34,7 +37,10 @@ export const routes: Routes = [
     //     ]
     // },
 
-    { path: '', component: LoginComponent },
-    { path: 'home', component: HomeComponent },
+    // { path: '', component: Login2Component },
+    // { path: 'home', component: HomeComponent },
+
+    { path: '', component: HomeForGuardComponent },  // Home route
+    { path: 'login', component: LogiForGuardComponent, canActivate: [authGuard] },
     
 ];
