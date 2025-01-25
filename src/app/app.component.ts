@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { NgContainerComponent } from './components/ng-container/ng-container.component';
-// import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
 // import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 // import { ReactiveComponent } from './components/reactive/reactive.component';
 // import { PostComponent } from './components/post/post.component';
@@ -11,7 +12,7 @@ import { NgContainerComponent } from './components/ng-container/ng-container.com
 
 @Component({
   selector: 'app-root',
-  imports: [NgContainerComponent,CommonModule],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
